@@ -1,6 +1,8 @@
-# Python GUI
+# Big GUI
 
-School project GUI made with PySimpleGUI and SQLAlchemy
+Technical dept? We don't do that here.
+
+School project GUI made with PySimpleGUI and SQLAlchemy.
 
 ## Installing
 
