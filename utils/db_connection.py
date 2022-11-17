@@ -1,10 +1,10 @@
-from ..db.lib import engine
+from db.lib import Session
 
 
 class DbConnection(object):
     def __enter__(self):
-        self.conn = engine.connect()
-        return self.conn()
+        self.conn = Session()
+        return self.conn
 
-    def __exit__(self):
+    def __exit__(self, *args):
         self.conn.close()

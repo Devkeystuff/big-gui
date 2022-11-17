@@ -1,10 +1,10 @@
+from datetime import date
+
 import sqlalchemy as db
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 engine = db.create_engine("sqlite:///gui.db", echo=True)
-meta = db.MetaData()
+Session = sessionmaker(bind=engine)
 
-class Log(db.Table):
-    id = db.Column(db.Integer, primary_key=True),
-    payload = db.Column(db.String),
-    response = db.Column(db.String),
-    created_at = db.Column(db.DateTime)
+Base = declarative_base(engine)
