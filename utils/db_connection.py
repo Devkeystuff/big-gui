@@ -1,4 +1,4 @@
-from db.lib import Session
+from db import Session
 
 
 class DbConnection(object):

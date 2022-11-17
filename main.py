@@ -35,7 +35,7 @@ def main():
             create_log(values[Inputs.CITY], temperature.get("temp"))
         elif event == Events.GET_LOGS:
             logs = get_all_logs()
-            formatted_logs = "\n".join([f"{log.payload}: {log.response} ℃ {log.created_at.strftime('%Y-%m-%d %H:%M:%S')}" for log in logs])
+            formatted_logs = "\n".join([f"{log.payload.capitalize()}: {log.response} ℃ {log.created_at.strftime('%Y-%m-%d %H:%M:%S')}" for log in logs])
             window[Outputs.LOGS].update(formatted_logs)
     window.close()
 

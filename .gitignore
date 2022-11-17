@@ -1,3 +1,4 @@
 .env
 venv
 gui.db
+__pycache__/

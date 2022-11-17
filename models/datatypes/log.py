@@ -4,7 +4,7 @@ from datetime import datetime
 import sqlalchemy as db
 from dataclasses_json import dataclass_json
 
-from db.lib import Base, engine
+from db import Base, engine
 
 
 @dataclass_json
@@ -20,5 +20,3 @@ class Log(Base):
     payload = db.Column(db.String)
     response = db.Column(db.String)
     created_at = db.Column(db.DateTime, default=datetime.now())
-
-Base.metadata.create_all(engine)

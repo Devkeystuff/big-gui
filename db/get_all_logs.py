@@ -1,4 +1,4 @@
-from models.datatypes.log import Log
+from models.datatypes import Log
 from utils.db_connection import DbConnection
 
 
